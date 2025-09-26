@@ -11,8 +11,11 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Parte principal de la pantalla
       body: Container(
+        // Añade estilos
         decoration: const BoxDecoration(
+          // Hace un degradado de colores
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -22,11 +25,14 @@ class WelcomeScreen extends StatelessWidget {
             ],
           ),
         ),
+        // Evita que el contenido quede en la barra de notificaciones
         child: SafeArea(
           child: Center(
             child: Column(
+              // Centra en el eje vertical
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // Texto de bienvenida con correo del usuario
                 Text(
                   "Bienvenido, usted ha ingresado con el correo $email",
                   style: TextStyle(
